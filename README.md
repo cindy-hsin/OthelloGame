@@ -8,7 +8,7 @@ A graphical game of Othello that allows human players to play against computer o
 
 The game is played with black-and-white tiles on an 8x8 board. The object of the game is to have more tiles of your color than your opponent has of theirs. Play begins with 4 tiles in the middle, two white and two black, like this:
 ![image](https://user-images.githubusercontent.com/66403829/183505434-cf3267ed-8d6a-43b4-b198-bd7a9dba4e91.png)
-<img src="[drawing.jpg](https://user-images.githubusercontent.com/66403829/183505434-cf3267ed-8d6a-43b4-b198-bd7a9dba4e91.png)" alt="drawing" width="200"/>
+<img src="https://user-images.githubusercontent.com/66403829/183505434-cf3267ed-8d6a-43b4-b198-bd7a9dba4e91.png" alt="drawing" width="200"/>
 
 Black goes first. That player lays down a tile, which must be in a legal position. Any white tiles in between the new black tile and an existing black tile get flipped. Here’s what happens if I put a black tile above the northwest white tile -- it flips and becomes a black tile, so now I’m winning:
 ![image](https://user-images.githubusercontent.com/66403829/183505474-d098a66b-5848-4f92-b0bd-b3025a1b5f7a.png)
