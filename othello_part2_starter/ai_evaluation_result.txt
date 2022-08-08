@@ -1,0 +1,15 @@
+Random1856 56
+Random1859 41
+Random1902 44
+Random1905 42
+Random1908 34
+Max1944 38
+Max1947 31
+Max1950 24
+Max1954 30
+Max1957 32
+MaxWeight2002 31
+MaxWeight2005 27
+MaxWeight2009 30
+MaxWeight2021 14
+MaxWeight2029 33

@@ -1,0 +1,40 @@
+1. Did you attempt to make your computer player very smart -- i.e., do something more clever than just pick a random legal move?
+   Yes.
+
+2. If so, were you able to accomplish this? Is your computer player as smart as you would like?
+   Yes.
+
+3. How did you determine which piece to play next? Tell us about your “pick next move” algorithm.
+   In addition to the random pick, I implemented 2 other algorithms.
+   (1). Local Maximization: the max_pick() method of Computer class. 
+		Among all legal positions, pick the one that flips the maximum number of opponent's tiles. If there are more than one such position, then randomly pick one from them.
+   
+   (2). Local Weight Maximization: the max_weight() method of Computer class.
+		This algorithm takes "advantageous positions" like corners and edges into consideration. 
+		
+		A weight value is defined for each position, evaluating how advantageous this position is for the current player(that is, the computer). Specifically:
+		(a). The 4 corners are given the highest weight, because corners are the most stable positions -- it's impossible to flip a tile on the corner. 
+		(b). Edges that are not adjacent to the corners are also more advantageous than center positions, but less advantageous than corners since they can still be flipped if the opponent puts a tile on the edge.
+		(c). Positions adjacent to corners are given the lowest weight (negative weight), because putting a tile in such positions will lead to opponents' capturing the corners.
+		(d). So as the positions adjacent to edges, but they are less disadvantageous than adjacent-to-corner positions.
+		
+		Based on the above definition of weight, for each of computer player's legal positions, a new board state that results from putting a tile at this position is simulated. Then, a score of this new board state is calculated. The score is defined as follows:
+			score = computer's score - human's score
+			computer's score = the sum of "number of white tile at the position * weight of the position" over all positions
+			human's score = the sum of "number of black tile at the position * weight of the position" over all positions
+		
+		Finally, the legal position that leads to a board state with the highest score is picked as the computer's next move. Similar to algorithm (1), if there are more than one position rated the same highest score, just randomly pick one from them. 
+
+4. How often did your computer program beat you, or your friends, or whoever tested it out for you?
+	I tested 5 games with each algorithm. The white(human) players' score are as follows:
+	Random: 
+		56(win), 44(win), 42(win), 41(win), 34(win)
+	Local Maximization: 
+		38(win), 32(tie), 31(lose), 30(lose), 24(lose)
+	Local Weight Maximization:
+		33(win), 31(lose), 30(lose), 27(lose), 14(lose)
+	The above result shows that the two improved algorithms brought us a smarter computer!
+	It also shows that considering advantageous positions is a better strategy.
+
+5. How would you improve it in the future?
+	The algorithms I implemented only considered the effect of the current one step. In the future, I would try implementing a more advanced algorithm that would consider as many future steps as possible, such as "Minimax Algorithm", with the help of a tree data structure.
