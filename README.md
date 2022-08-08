@@ -6,7 +6,7 @@
 1. Implemented DFS algorithm to validate player’s moves; applied greedy algorithm and corner-edge strategy to optimize computer’s moves, reaching a winning rate of 80%.
 2. Created GUI with a clickable chessboard and real-time scoreboard with Processing and Java Swing; conducted unit testing with Pytest that achieved a line coverage of 95%.
 
-## Game Rules and UI Intructions: 
+## Game Rules and UI Instructions: 
 The game is played with black-and-white tiles on an 8x8 board. The object of the game is to have more tiles of your color than your opponent has of theirs. Play begins with 4 tiles in the middle, two white and two black, like this:
 
 <img src="https://user-images.githubusercontent.com/66403829/183505434-cf3267ed-8d6a-43b4-b198-bd7a9dba4e91.png" alt="drawing" width="400"/>
